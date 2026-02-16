@@ -51,7 +51,7 @@ The Association shall maintain a registered agent in the State of Wyoming as req
 ## 2. PURPOSE AND MISSION
 
 ### 2.1 Nonprofit Purpose
-The Association is organized exclusively for nonprofit purposes within the meaning of Section 501(c)(3) or 501(c)(4) of the Internal Revenue Code, or the corresponding section of any future federal tax code.
+The Association is organized exclusively for nonprofit purposes. The specific federal tax-exempt status (e.g., Section 501(c)(4) of the Internal Revenue Code) shall be determined in consultation with tax counsel prior to filing the applicable IRS forms (Form 1024 for 501(c)(4) status). Alternatively, the Association may elect to operate as a taxable nonprofit association filing Form 990 without seeking specific tax-exempt status, as determined by governance vote.
 
 ### 2.2 Specific Mission
 The mission of Gybernaty DUNA is to advance scientific research, technological innovation, and community development in the fields of:
@@ -217,7 +217,7 @@ Holders of GBR tokens have the following rights:
 GBR tokens do **not** entitle holders to:
 
 - Dividends or profit distributions
-- Ownership of Association assets (except as determined by governance vote upon dissolution)
+- Ownership of Association assets
 - Guarantees of token value appreciation
 
 The Association explicitly disclaims any profit-sharing or security-like characteristics of the GBR token. The token is a **utility token** used solely for governance purposes.
@@ -416,14 +416,23 @@ The Administrator is **strictly prohibited** from:
 - Initiating any expenditure without on-chain approval
 - Accessing, controlling, or moving crypto assets (keys held by smart contracts only)
 - Making discretionary decisions on behalf of the Association
-- Entering into contracts exceeding $[1,000] without governance approval
+- Entering into contracts exceeding $2,000 without governance approval
 - Hiring employees or contractors without governance approval
 - Speaking publicly on behalf of the Association without governance authorization
 
 **Consequences of Violation:**
-- Immediate termination
+- Written notice specifying the alleged violation
+- **Cure Period:** 7 calendar days to remedy the violation (except for fraud or criminal conduct, which warrant immediate termination)
+- If not cured: Termination by governance vote
 - Contractual liquidated damages: **$[10,000-50,000]**
 - Legal action to recover damages
+
+**Administrator Legal Protection:**
+The Administrator shall NOT be penalized for refusing to execute a governance-approved action if:
+- The action would violate applicable law (e.g., OFAC sanctions, AML regulations, tax fraud)
+- The Administrator provides written justification citing the specific legal concern within 48 hours
+- The Association may seek independent legal opinion to resolve the dispute
+- If independent counsel confirms the action is lawful, Administrator must execute within 7 days or face termination
 
 ---
 
@@ -495,7 +504,7 @@ The Association employs a **two-tier fiat banking structure** to maximize DAO co
 **Tier 2: Operating Fiat Account (Administrator-Managed, Operational)**
 
 **Structure:**
-- **Provider:** Traditional U.S. bank (Mercury, SVB successor, or Wyoming local bank)
+- **Provider:** Traditional U.S. bank (Mercury, Relay, Lead Bank, or Wyoming local bank)
 - **Account Type:** Business checking account
 - **Control:** Administrator as sole signatory
 - **Access:** Administrator can make payments within approved budget limits
@@ -880,7 +889,10 @@ When a token holder proposes a governance action that would benefit them financi
 
 1. **Disclose** the conflict of interest publicly before the vote
 2. **Justify** that the compensation is reasonable and aligned with the mission
-3. **Recuse** themselves from voting (optional, but recommended for major conflicts)
+3. **Recuse** themselves from voting on the proposal (mandatory for all self-dealing transactions involving the proposer's direct financial benefit exceeding $5,000)
+
+**Independent Review:**
+For any self-dealing transaction exceeding $10,000, the Association shall seek independent review from at least two (2) disinterested token holders or an advisory committee to confirm that the compensation is reasonable and aligned with the Association's mission. This review shall be documented and published before the governance vote.
 
 **Documentation:**
 - All self-dealing transactions >$[10,000] must be documented with:
@@ -1102,8 +1114,8 @@ The Association may license IP to for-profit companies or other entities:
 - **Beneficial Owners** are individuals with >25% control or ownership
 
 **Who to Report:**
-- If token distribution is decentralized (no single holder >25%), report "No beneficial owners" or report the top 1-3 holders
-- If a single individual or small group controls >25%, report those individuals
+- Report all individuals exercising 'substantial control' over the Association, regardless of token ownership percentage. Under the Corporate Transparency Act, 'substantial control' includes senior officers, important decision-makers, and anyone with authority to appoint or remove key personnel
+- Additionally report any individual owning or controlling >25% of governance tokens
 
 **Information Required:**
 - Full legal name, date of birth, residential address, ID number (passport or driver's license)
@@ -1141,7 +1153,7 @@ The Association may license IP to for-profit companies or other entities:
 ### 11.4 Securities Law Compliance
 
 **Howey Test Analysis:**
-The Association has obtained legal counsel confirming that the GBR token is **not** a security under the Howey Test because:
+The Association **shall obtain** legal counsel confirming that the GBR token is **not** a security under the Howey Test. The legal analysis will address the following factors:
 
 1. **No investment of money for profit**: Token holders do not expect profits from the Association's efforts
 2. **No common enterprise**: Token holders govern independently, not as passive investors
@@ -1153,8 +1165,7 @@ The Association has obtained legal counsel confirming that the GBR token is **no
 - Buyback & burn is an asset management operation, **not** profit distribution
 
 **Legal Opinion:**
-- The Association has obtained a legal opinion from [Law Firm Name] dated [Date], concluding GBR is not a security
-- Opinion available to token holders upon request
+- The Association **shall obtain** a legal opinion from qualified securities law counsel before launching governance operations. This opinion will be made available to token holders upon request
 
 **Ongoing Monitoring:**
 - Administrator monitors SEC guidance on crypto tokens
@@ -1163,7 +1174,7 @@ The Association has obtained legal counsel confirming that the GBR token is **no
 ### 11.5 State Registrations
 
 **Wyoming:**
-- Annual Report filed with Wyoming Secretary of State by [date each year]
+- Annual Report filed with Wyoming Secretary of State (if required for DUNA under Wyoming § 17-22; verify with Secretary of State office)
 - Registered Agent fee paid annually
 
 **Other States:**
@@ -1314,7 +1325,7 @@ Pursuant to Wyoming Statute § 17-22-112, this Association includes the followin
 >    - For their own willful misconduct or gross negligence
 >    - As required by law (e.g., tax liabilities for compensation received)
 >
-> 4. **Reliance on Smart Contracts**: Members may rely on the code of the smart contracts as the definitive expression of the Association's governance rules. If this Agreement conflicts with the smart contract code, the **smart contract code prevails** (unless the conflict is due to a bug, in which case governance may vote to repair).
+> 4. **Reliance on Smart Contracts**: Members may rely on the code of the smart contracts as the primary operational mechanism of the Association's governance. However, if this Agreement conflicts with the smart contract code, **this Agreement prevails** for legal and regulatory purposes, and governance shall vote to correct the smart contract code to conform with this Agreement. Smart contracts are tools that implement this Agreement, not substitutes for it.
 
 ### 14.2 Disclaimer of Warranties
 
