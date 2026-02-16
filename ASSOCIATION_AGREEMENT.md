@@ -27,6 +27,7 @@
 13. [Dissolution](#13-dissolution)
 14. [Limitation of Liability and Fiduciary Duties](#14-limitation-of-liability-and-fiduciary-duties)
 15. [Miscellaneous Provisions](#15-miscellaneous-provisions)
+16. [Insurance](#16-insurance)
 
 ---
 
@@ -197,6 +198,9 @@ Membership in the Association is open to all holders of the **GBR Governance Tok
 **Blockchain:** BNB Smart Chain (BSC)
 
 The GBR token serves as the exclusive mechanism for governance participation. Each token represents one unit of voting power in on-chain governance.
+
+**Fixed Supply Guarantee:**
+The total supply of GBR tokens is permanently fixed at the amount minted at token creation. The GBR token smart contract does **not** contain a `mint()` function and **no new GBR tokens can ever be created**. This is an immutable property of the token contract and cannot be changed by governance vote, smart contract upgrade, or any other mechanism. The only direction of supply change is deflationary (via buyback & burn as described in Section 9.5). Any proposal to deploy a new token with minting capability would require dissolution of the current governance structure and is explicitly prohibited under this Agreement.
 
 ### 3.3 Token Distribution
 The total supply of GBR tokens is distributed as follows:
@@ -409,7 +413,42 @@ The Administrator shall:
 - Immediate termination by governance vote for: (1) Failure to execute approved decisions, (2) Unauthorized actions, (3) Breach of fiduciary duty, (4) Criminal conduct
 - 30-day notice termination by either party without cause
 
-### 6.4 Limitation on Administrator Authority
+### 6.4 Administrator Transition and DAO-Appointed Executors
+
+**Principle of Uninterrupted Governance:**
+The Association's operations shall **never** depend on the presence of an Administrator. The DAO retains full operational capability at all times through the following mechanisms:
+
+**DAO-Appointed Trusted Executors:**
+At any time, with or without an active Administrator, token holders may nominate and approve via governance vote one or more **Trusted Executors** — individuals or specialized companies — to perform specific operational tasks on behalf of the Association.
+
+**Scope of Trusted Executors:**
+- Execute specific fiat payments or banking operations
+- Handle legal, accounting, or compliance tasks
+- Manage vendor relationships or service contracts
+- Perform any ministerial function normally assigned to the Administrator
+- Scope is strictly limited to the specific mandate approved by governance vote
+
+**Appointment Process:**
+1. Any token holder meeting the Proposal Threshold may nominate an Executor for a specific task or role
+2. Governance vote approves or rejects (standard parameters)
+3. Executor receives on-chain mandate with defined scope, budget, and duration
+4. Executor reports completion on-chain or via designated communication channel
+
+**Administrator Vacancy Transition:**
+In the event the Administrator role is vacant (due to termination, resignation, or any other reason):
+- All crypto operations continue uninterrupted (governed by smart contracts)
+- Governance immediately appoints one or more Trusted Executors to cover critical fiat and compliance functions
+- Executors operate under the same restrictions as the Administrator (zero discretion, execute only governance-approved actions)
+- Governance initiates search for a permanent replacement Administrator (if deemed necessary)
+- There is no mandatory requirement to appoint a permanent Administrator — the community may operate indefinitely through DAO-appointed Executors if governance so decides
+
+**Limitations on Trusted Executors:**
+- Subject to all restrictions applicable to the Administrator (Section 6.5)
+- Authority expires automatically upon completion of mandate or at the end of the approved term
+- No Executor may serve for more than [6 months] without governance re-approval
+- Subject to immediate removal by governance vote
+
+### 6.5 Limitation on Administrator Authority
 
 The Administrator is **strictly prohibited** from:
 
@@ -1180,7 +1219,7 @@ The Association **shall obtain** legal counsel confirming that the GBR token is 
 **Other States:**
 - If the Association conducts substantial business in other states, may need to register as a foreign nonprofit association
 
-### 11.6 Data Privacy
+### 11.6 Data Privacy and Breach Notification
 
 **GDPR (if applicable):**
 - If the Association processes personal data of EU residents, comply with GDPR
@@ -1193,6 +1232,33 @@ The Association **shall obtain** legal counsel confirming that the GBR token is 
 **On-Chain Privacy:**
 - Governance votes are pseudonymous (wallet addresses visible, but not linked to real identities)
 - Association does not collect personal data unless necessary (e.g., grant recipients for tax purposes)
+
+**Data Breach Notification Procedure:**
+
+In the event of a data breach affecting personal data of members, grant recipients, or third parties:
+
+1. **Detection and Containment** (0-24 hours):
+   - Administrator or Trusted Executor immediately isolates affected systems
+   - Emergency Multisig (if established) may authorize emergency security measures
+   - Incident documented with timestamp, scope, and affected data categories
+
+2. **Assessment** (24-48 hours):
+   - Determine: what data was compromised, how many individuals affected, severity of risk
+   - Engage cybersecurity forensics specialist (pre-approved vendor or via emergency governance vote)
+
+3. **Notification** (within 72 hours of detection):
+   - **Regulatory Authorities**: Notify relevant supervisory authority within 72 hours (GDPR Article 33 requirement)
+   - **Affected Individuals**: Notify all affected persons without undue delay if breach poses high risk to rights and freedoms (GDPR Article 34)
+   - **Community**: Publish breach notice on governance forum and official channels (excluding details that could enable further exploitation)
+   - **Law Enforcement**: Report to relevant authorities if criminal activity suspected
+
+4. **Remediation** (ongoing):
+   - Implement corrective measures to prevent recurrence
+   - Governance vote to approve remediation budget (if exceeding Operating Account limits)
+   - Post-incident review published to community within 30 days
+
+**Minimum Data Collection Principle:**
+The Association shall collect and retain only the minimum personal data required by law (tax reporting, KYC obligations). All non-essential personal data shall be deleted within 12 months of the purpose for which it was collected being fulfilled.
 
 ---
 
@@ -1358,7 +1424,7 @@ The Association shall indemnify and hold harmless the Administrator and Emergenc
 - Indemnification funded from Association treasury (subject to governance approval)
 
 **Insurance:**
-- The Association shall obtain Directors & Officers (D&O) insurance for the Administrator (subject to budget approval)
+- The Association shall obtain comprehensive insurance coverage as detailed in Section 16 (Insurance), including D&O, smart contract, general liability, and cyber liability policies
 
 ### 14.4 No Partnership or Joint Venture
 
@@ -1475,6 +1541,68 @@ The Association and its members shall not be liable for failure to perform oblig
 
 **Non-Disclosure Agreements:**
 - The Association may enter into NDAs with third parties (e.g., for commercial partnerships), subject to governance approval.
+
+---
+
+## 16. INSURANCE
+
+### 16.1 Directors & Officers (D&O) Insurance
+
+The Association shall obtain and maintain D&O insurance covering the Administrator, Emergency Multisig signers (if any), and DAO-appointed Trusted Executors against claims arising from their performance of duties under this Agreement.
+
+**Coverage:**
+- Defense costs, settlements, and judgments for claims alleging wrongful acts in the performance of duties
+- Minimum coverage: $[500,000-1,000,000] (subject to governance approval based on treasury size)
+
+**Exclusions:**
+- Willful misconduct, gross negligence, or fraud
+- Unauthorized actions outside the scope of this Agreement
+
+### 16.2 Smart Contract Insurance
+
+The Association shall obtain smart contract coverage for the Governor, Timelock, and Treasury contracts through decentralized insurance protocols (Nexus Mutual, InsurAce, or equivalent) or traditional cyber insurance carriers.
+
+**Coverage:**
+- Loss of treasury assets due to smart contract exploits, bugs, or vulnerabilities
+- Coverage amount: up to [50-80%] of treasury value (subject to availability and governance approval)
+
+**Requirements:**
+- Coverage obtained **before** or immediately after deployment of governance contracts
+- Policy maintained continuously; lapse requires governance notification within 48 hours
+- Annual review of coverage adequacy by governance vote
+
+### 16.3 General Liability Insurance
+
+The Association shall obtain general liability insurance to cover:
+
+- Third-party bodily injury or property damage claims (e.g., at community events)
+- Advertising injury (defamation, copyright infringement in publications)
+- Minimum coverage: $[500,000-1,000,000] per occurrence
+
+### 16.4 Cyber Liability Insurance
+
+The Association shall obtain cyber liability insurance covering:
+
+- Data breach response costs (forensics, notification, credit monitoring for affected individuals)
+- Regulatory fines and penalties arising from data privacy violations (GDPR, CCPA)
+- Business interruption losses due to cyberattacks
+- Ransomware and extortion response
+- Minimum coverage: $[500,000-1,000,000] (subject to governance approval)
+
+### 16.5 Insurance Governance
+
+**Approval:**
+- All insurance policies and premiums require governance vote approval
+- Annual review of all active policies (coverage adequacy, cost-benefit analysis)
+
+**Funding:**
+- Insurance premiums paid from Association treasury (fiat or crypto as applicable)
+- Included in annual budget proposal
+
+**Claims:**
+- Administrator or Trusted Executor authorized to file insurance claims on behalf of the Association
+- Settlement of claims >$[10,000] requires governance approval
+- All claim proceedings reported to token holders
 
 ---
 
