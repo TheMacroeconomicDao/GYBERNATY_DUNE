@@ -1,4 +1,5 @@
 # ASSOCIATION AGREEMENT
+
 ## GYBERNATY DUNA
 ### (Decentralized Unincorporated Nonprofit Association)
 
